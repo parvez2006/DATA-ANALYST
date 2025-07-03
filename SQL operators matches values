@@ -1,0 +1,21 @@
+create database student5;
+use student5;
+create table employe2(
+id int,
+salary int not null,
+name varchar(50),
+grade varchar(1),
+city char(50),
+primary key(id,salary)
+
+);
+insert into employe2
+(id,salary,name,grade,city)
+values
+(12,30000,'sanju','c','delhi'),
+(1,50000,'sumraj','a','mumbai'),
+(2,80000,'salman khan','a','mumbai'),
+(3,90000,'sameer','a','delhi');
+select*from employe2; 
+
+select*from employe2 where city not in('delhi','mumbai','hariyana');
