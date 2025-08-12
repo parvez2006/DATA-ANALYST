@@ -1,3 +1,17 @@
+ Sample Table – Students
+| student_id | name | marks | age | city | |------------|--------|-------|-----|---------| | 1 | Ramesh | 85 | 19 |
+Delhi | | 2 | Priya | 92 | 20 | Mumbai | | 3 | Ahmed | 67 | 18 | Delhi | | 4 | Neha | 76 | 21 | Kolkata | | 5 |
+Sameer | 58 | 19 | Mumbai | | 6 | Kiran | 89 | 22 | Delhi |
+
+   A. Arithmetic Operators (6 Questions)
+1 Increase all students’ marks by 5.
+2 Find students whose marks after subtracting 3 are less than 70.
+3 Show each student’s marks multiplied by 2.
+4 Show the remainder when each student’s marks is divided by 7.
+5 Find students whose age after adding 1 becomes 20.
+6 Display total marks of all students plus 50.
+
+   
 create database sameer6;
 use sameer6;
 create table student(
