@@ -1,0 +1,43 @@
+SQL Operators Practice Questions
+
+Sample Table – Students
+| student_id | name | marks | age | city | |------------|--------|-------|-----|---------| | 1 | Ramesh | 85 | 19 |
+Delhi | | 2 | Priya | 92 | 20 | Mumbai | | 3 | Ahmed | 67 | 18 | Delhi | | 4 | Neha | 76 | 21 | Kolkata | | 5 |
+Sameer | 58 | 19 | Mumbai | | 6 | Kiran | 89 | 22 | Delhi |
+
+C. Logical Operators (8 Questions)
+1 Find students from Delhi and marks above 80.
+2 Show students from Mumbai or Kolkata.
+3 Find students whose marks are between 70 and 90.
+4 Show students whose city is not Delhi.
+5 Find students whose marks are above 80 and age is below 21.
+6 Find students whose city is in (‘Delhi’, ‘Mumbai’).
+7 Show students whose marks are not between 60 and 85.
+8 Find students with marks > 80 or age > 21.
+
+create database sameer8;
+use sameer8;
+create table student(
+id int primary key,
+name varchar(50),
+marks int,
+age int not null,
+city varchar(50)
+);
+insert into student
+(id,name,marks,age,city)
+values
+(1,'ramesh',85,19,'delhi'),
+(2,'priya',92,20,'mumbai'),
+(3,'ahmed',67,18,'delhi'),
+(4,'neha',76,21,'kollkata'),
+(5,'sameer',58,19,'mumbai'),
+(6,'kiran',89,22,'delhi');
+select*from student where city="delhi" and marks>80;
+select*from student where city in ('mumbai', 'kollkata');
+select*from student where marks between 70 and 90;
+select*from student where city not in("delhi");
+select*from student where marks>80 and age<21;
+select*from student  where city in('delhi','mumbai');
+select*from student where marks not between 60 and 85;
+select*from student where marks>80 and age>21;
