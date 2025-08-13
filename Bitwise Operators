@@ -1,0 +1,36 @@
+SQL Operators Practice Questions
+Sample Table – Students
+| student_id | name | marks | age | city | |------------|--------|-------|-----|---------| | 1 | Ramesh | 85 | 19 |
+Delhi | | 2 | Priya | 92 | 20 | Mumbai | | 3 | Ahmed | 67 | 18 | Delhi | | 4 | Neha | 76 | 21 | Kolkata | | 5 |
+Sameer | 58 | 19 | Mumbai | | 6 | Kiran | 89 | 22 | Delhi |
+
+D. Bitwise Operators (5 Questions)
+1 Find students whose marks are even (marks & 1 = 0).
+2 Find students whose marks are odd (marks & 1 = 1).
+3 Find students where (age | 2) = age.
+4 Show students where (marks & 4) != 0.
+5 Show students where (marks | 8) = marks.
+
+create database sameer8;
+use sameer8;
+create table student(
+id int primary key,
+name varchar(50),
+marks int,
+age int not null,
+city varchar(50)
+);
+insert into student
+(id,name,marks,age,city)
+values
+(1,'ramesh',85,19,'delhi'),
+(2,'priya',92,20,'mumbai'),
+(3,'ahmed',67,18,'delhi'),
+(4,'neha',76,21,'kollkata'),
+(5,'sameer',58,19,'mumbai'),
+(6,'kiran',89,22,'delhi');
+select*from student where marks & 1 = 0;
+select*from student where marks  & 1 = 1;
+select*from student where  (age | 2) = age;
+select*from student where (marks & 4) != 0;
+select*from student where  (marks | 8) = marks;
