@@ -1,0 +1,44 @@
+Sample Table: students
+id name city marks age
+1 Sameer Mumbai 85 19
+2 Priya Delhi 92 20
+3 Aman Kolkata 78 18
+4 Riya Mumbai 90 21
+5 Karan Jaipur 95 20
+6 Neha Delhi 88 19
+7 Arjun Chennai 80 22
+
+Questions – ORDER BY
+1. Show all students sorted by marks in descending order.
+2. Show all students sorted by name in ascending order.
+3. Show all students sorted by city in ascending order, and if the city is the same, sort by marks
+descending.
+4. Show the top 3 students with the highest marks.
+5. Show the lowest marks student in the table.
+
+create database sameer9;
+use sameer9;
+create table student(
+id int,
+name varchar(50),
+city varchar(50),
+marks int not null,
+age int,
+primary key(id)
+);
+insert into student
+(id,name,city,marks,age)
+values
+(1,'sameer','mumbai',85,19),
+(2,'priya','delhi',92,20),
+(3,'aman','kolkata',78,18),
+(4,'riya','mumbai',90,21),
+(5,'karan','jaipur',95,20),
+(6,'neha','delhi',88,19),
+(7,'arjun','chennai',80,22);
+
+select*from student order by marks desc;
+select*from student order by marks asc;
+select*from student order by city asc, marks desc;
+select*from student order by marks asc limit 3;
+select*from student order by marks asc limit 1;
